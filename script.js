@@ -1,3 +1,5 @@
+// TODO: put .onload event listeners for the sort actions
+// TODO: create buttons to switch between the sort actions
 
 // List of movies
 let movies = [
@@ -55,15 +57,11 @@ let movies = [
 
 window.onload = function () {
     // let sortedMovies = sortMoviesByRank(movies);
-    let sortedMovies = sortMoviesByAttr(movies, 'title');
+    let sortedMovies = sortMoviesByAttr(movies, 'rank');
     // Display Movies list
     displayMovies(sortedMovies);
 }
 
-/**
- * Display list of movies in a table
- * You don't have to worry so much about this
- */
 function displayMovies(movies) {
     let table = "<table border='1' style='width: 100%'>";
     table += "<tr><th>ID</th><th>Name</th><th>Rank</th></tr>";
@@ -127,4 +125,3 @@ function getMaxMovieObject(movies, start, sortAttr) {
     }
     return { max_obj: maximum, max_index: max_location }
 }
-
